@@ -1,6 +1,4 @@
 from manim import *
-from manim.utils.color.BS381 import BOLD_RED
-
 
 class GridScene(Scene):
     def construct(self):
@@ -17,6 +15,7 @@ class GridScene(Scene):
         #self.add(grid)
         #grid.add_coordinates()
 
+
 # fill_opacity: float = 1
         # Vytvoření textu s plnou výplní (fill_opacity=1)
         opaque_text = Text("Defaultní, plně neprůhledný text(1)", fill_opacity=1)
@@ -29,6 +28,7 @@ class GridScene(Scene):
         # Přidání textů do scény
         #self.add(opaque_text, transparent_text,more_transparent_text)
         #self.wait(2)
+
 
 # weight: str = NORMAL
     # Pango stuff
@@ -47,6 +47,7 @@ class GridScene(Scene):
         #self.add(normal_text, heavy_text, thin_text)
         #self.wait(2)
 
+
 # disable_ligatures: bool = False
         # Text s povolenými ligaturami (výchozí chování)
         text_with_ligatures = Text("office", font_size=72)
@@ -59,6 +60,26 @@ class GridScene(Scene):
         text_without_ligatures.shift(DOWN * 2)  # Posun textu dolů
 
         # Přidání textů do scény
-        self.add(text_with_ligatures, text_without_ligatures)
-        self.wait(2)
+        #self.add(text_with_ligatures, text_without_ligatures)
+        #self.wait(2)
 
+
+# gradient: tuple = None
+        # Vytvoření textu s gradientem
+        gradient_text = Text("Gradient texts", gradient=(RED, GREEN))
+        gradient_text_more = Text("Gradient textss", gradient=(RED, GREEN, BLUE))
+        gradient_text_more_color = Text("Gradient textsss", gradient=(RED, GREEN, BLUE, PURPLE))
+
+        # Umístění textu
+        gradient_text.shift(UP * 1)
+        gradient_text_more_color.shift(DOWN * 1)
+        # Přidání textu do scény
+        #self.add(gradient_text, gradient_text_more, gradient_text_more_color)
+        #self.wait(2)
+
+# t2c: dict[str, str]
+        # Vytvoření slovníku pro změnu barvy textu
+        text = Text("Text s různými barvami", t2c={"různými": GREEN, "barvami": BLUE})
+        # Přidání textu do scény
+        self.add(text)
+        self.wait(2)
