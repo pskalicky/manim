@@ -84,7 +84,7 @@ class GridScene(Scene):
         #self.add(single_line_text, double_line_text, triple_line_text)
         #self.wait(2)
 
-#font: str = "font_name"
+# font: str = "font_name"
     # Vytvoření textu s různým fontem
     # Vytvoření textu s výchozím fontem
         #default_font_text = Text("Výchozí font")
@@ -99,7 +99,7 @@ class GridScene(Scene):
         #self.add(default_font_text, comic_sans_text, arial_text)
         #self.wait(2)
 
-#slant: str = NORMAL
+# slant: str = NORMAL
     # Pango stuff
     # {NORMAL, ITALIC, OBLIQUE, BOLD}
     # Vytvoření textu s různým sklonem
@@ -129,7 +129,7 @@ class GridScene(Scene):
         #self.add(normal_text, heavy_text, thin_text)
         #self.wait(2)
 
-# t2c: dict[str, str]
+# t2c: dict[str, str] = None
     # Vytvoření slovníku pro změnu barvy textu
         #text = Text("Text s různými barvami", t2c={"různými": GREEN, "barvami": BLUE})
     # Přidání textu do scény
