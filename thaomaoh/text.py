@@ -21,7 +21,6 @@ class GridScene(Scene):
         #text = Text("Hello world!")
     # Přidání textu do scény
         #self.add(text)
-        #self.wait(2)
 
 # fill_opacity: float = 1
     # Vytvoření textu s plnou výplní (fill_opacity=1)
@@ -34,7 +33,6 @@ class GridScene(Scene):
         #more_transparent_text.shift(DOWN * 1.5)
     # Přidání textů do scény
         #self.add(opaque_text, transparent_text,more_transparent_text)
-        #self.wait(2)
 
 # stroke_width: float = 0
     # Vytvoření textu s různou tloušťkou obrysu
@@ -46,7 +44,6 @@ class GridScene(Scene):
         #thick_stroke_text.shift(DOWN * 1.5)
     # Přidání textů do scény
         #self.add(no_stroke_text, thin_stroke_text, thick_stroke_text)
-        #self.wait(2)
 
 # color: ParsableManimColor | None = None
     # Vytvoření textu s různými barvami
@@ -58,7 +55,6 @@ class GridScene(Scene):
         #blue_text.shift(DOWN * 1.5)
     # Přidání textů do scény
         #self.add(red_text, green_text, blue_text)
-        #self.wait(2)
 
 # font_size: float = DEFAULT_FONT_SIZE
     # Vytvoření textu s různou velikostí písma
@@ -70,7 +66,6 @@ class GridScene(Scene):
         #large_text.shift(DOWN * 1.5)
     # Přidání textů do scény
         #self.add(small_text, normal_text, large_text)
-        #self.wait(2)
 
 # line_spacing: float = -1
     # Vytvoření textu s různým řádkováním
@@ -82,7 +77,6 @@ class GridScene(Scene):
         #triple_line_text.shift(DOWN * 1.5)
     # Přidání textů do scény
         #self.add(single_line_text, double_line_text, triple_line_text)
-        #self.wait(2)
 
 # font: str = "font_name"
     # Vytvoření textu s výchozím fontem
@@ -96,7 +90,6 @@ class GridScene(Scene):
         #arial_text.shift(DOWN * 1.5)
     # Přidání textů do scény
         #self.add(default_font_text, comic_sans_text, arial_text)
-        #self.wait(2)
 
 # slant: str = NORMAL
     # Pango stuff
@@ -110,7 +103,6 @@ class GridScene(Scene):
         #oblique_text.shift(DOWN * 1.5)
     # Přidání textů do scény
         #self.add(normal_text, italic_text, oblique_text)
-        #self.wait(2)
 
 # weight: str = NORMAL
     # Pango stuff
@@ -126,7 +118,6 @@ class GridScene(Scene):
         #heavy_text.shift(DOWN * 1.5)
     # Přidání textů do scény
         #self.add(normal_text, heavy_text, thin_text)
-        #self.wait(2)
 
 # t2c: dict[str, str] = None
     # Vytvoření slovníku pro změnu barvy textu
@@ -140,28 +131,24 @@ class GridScene(Scene):
         #text = Text("Text s různými fonty", t2f={"různými": "Comic Sans MS", "fonty": "Arial"})
     # Přidání textu do scény
         #self.add(text)
-        #self.wait(2)
 
 # t2g: dict[str, tuple] = None
     # Vytvoření slovníku pro změnu gradientu textu
         #text = Text("Text s gradientem", t2g={"gradientem": (RED, GREEN)})
     # Přidání textu do scény
         #self.add(text)
-        #self.wait(2)
 
 # t2s: dict[str, str] = None
     # Vytvoření slovníku pro změnu sklonu textu
         #text = Text("Text s různým sklonem", t2s={"různým": ITALIC, "sklonem": OBLIQUE})
     # Přidání textu do scény
         #self.add(text)
-        #self.wait(2)
 
 # t2w: dict[str, str] = None
     # Vytvoření slovníku pro změnu tučnosti textu
         #text = Text("Text s různou tučností", t2w={"různou": BOLD, "tučností": NORMAL})
     # Přidání textu do scény
         #self.add(text)
-        #self.wait(2)
 
 # gradient: tuple = None
     # Vytvoření textu s gradientem
@@ -173,7 +160,6 @@ class GridScene(Scene):
         #gradient_text_more_color.shift(DOWN * 1)
     # Přidání textu do scény
         #self.add(gradient_text, gradient_text_more, gradient_text_more_color)
-        #self.wait(2)
 
 # tab_width: int = 4
     # Vytvoření textu s tabulátorem
@@ -185,35 +171,41 @@ class GridScene(Scene):
         #text_tab_long.shift(DOWN * 1)
     # Přidání textu do scény
         #self.add(text, text_tab_short, text_tab_long)
-        #self.wait(2)
 
 # warn_missing_font: bool = True
     # Vytvoření textu s chybějícím fontem
         #text = Text("Text s chybějícím fontem", font="nonexistent_font")
     # Přidání textu do scény
         #self.add(text)
-        #self.wait(2)
 
 # height: float = None
-    # Vytvoření textu s výškou
-        text = Text("Text s výškou", height=2)
+    # Vytvoření textu s rozdílnou výškou
+        #text = Text("defaltní výška")
+        #text_taller = Text("vyšší výška textu", height = 1)
+        #text_smaller = Text("menší výška textu", height = 0.5)
+    # Umístění textu
+        #text_smaller.shift(UP * 1)
+        #text_taller.shift(DOWN * 1.25)
     # Přidání textu do scény
-        self.add(text)
-        self.wait(2)
+        #self.add(text, text_taller, text_smaller)
 
 # width: float = None
-    # Vytvoření textu s šířkou
-        #text = Text("Text s šířkou", width=2)
+    # Vytvoření textu s rozdílnou šířkou
+        #text = Text("defaltní šířka")
+        #text_wider = Text("větší šířka textu", width = 10)
+        #text_smaller = Text("menší šířka textu", width = 3)
+    # Umístění textu
+        #text_smaller.shift(UP * 1)
+        #text_wider.shift(DOWN * 1.25)
     # Přidání textu do scény
-        #self.add(text)
-        #self.wait(2)
+        #self.add(text, text_wider, text_smaller)
 
 # should_center: bool = True
     # Vytvoření textu s centrováním
-        #text = Text("Text s centrováním", should_center=False)
+        text = Text("Text s centrováním", should_center=False)
     # Přidání textu do scény
-        #self.add(text)
-        #self.wait(2)
+        self.add(text)
+
 
 # disable_ligatures: bool = False
     # Text s povolenými ligaturami (výchozí chování)
